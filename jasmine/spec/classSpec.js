@@ -19,12 +19,6 @@ describe("rectangle Tests", function () {
 		expect(myShape.color).toEqual("blue");
 	});
 	
-	/*it("check spy", function(){
-		myShape.shoutout();
-		expect(myShape.shoutout).toHaveBeenCalled();
-		
-	});*/
-
 });
 
 describe("cube Tests", function () {
@@ -42,5 +36,12 @@ describe("cube Tests", function () {
 	it("volume", function () {
 		expect(cube.volume).toEqual(27000);
 	});
+
+	it("check spy", function(){
+		spyOn(cube, "shoutout");
+		cube.shoutout();
+		expect(cube.shoutout).toHaveBeenCalled();
+	});
+	
 
 });
