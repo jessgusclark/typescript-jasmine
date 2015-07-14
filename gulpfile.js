@@ -17,5 +17,5 @@ gulp.task('default', function () {
         out: '/'
         out: 'output.js'*/
       }));
-  return tsResult.js.pipe(gulp.dest('built/local/js'));
+  return tsResult.js.pipe(gulp.dest('build/local/js'));
 });
