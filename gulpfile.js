@@ -13,8 +13,8 @@ gulp.task('watch', function() {
 gulp.task('default', function () {
   var tsResult = gulp.src('source/**/*.ts')
     .pipe(ts({
-        noImplicitAny: true,
-        out: 'output.js'
+        noImplicitAny: true/*,
+        out: 'output.js'*/
       }));
   return tsResult.js.pipe(gulp.dest('built/local'));
 });
