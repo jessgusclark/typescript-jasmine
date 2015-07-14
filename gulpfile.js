@@ -11,10 +11,11 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function () {
-  var tsResult = gulp.src('source/**/*.ts')
+  var tsResult = gulp.src('source/typescript/*.ts')
     .pipe(ts({
         noImplicitAny: true/*,
+        out: '/'
         out: 'output.js'*/
       }));
-  return tsResult.js.pipe(gulp.dest('built/local'));
+  return tsResult.js.pipe(gulp.dest('built/local/js'));
 });
