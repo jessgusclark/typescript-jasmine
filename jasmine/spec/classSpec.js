@@ -1,5 +1,5 @@
-describe("shape Tests", function () {
-	
+describe("rectangle Tests", function () {
+
 	var myShape = new ShapeClass("square", 30, 30);
 
 	it("check name", function () {
@@ -8,6 +8,39 @@ describe("shape Tests", function () {
 
 	it("check size", function () {
 		expect(myShape.area).toEqual(900);
+	});
+
+	it("check color", function () {
+		expect(myShape.color).toEqual("pink");
+	});
+
+	it("change color", function () {
+		myShape.color = "blue";
+		expect(myShape.color).toEqual("blue");
+	});
+	
+	/*it("check spy", function(){
+		myShape.shoutout();
+		expect(myShape.shoutout).toHaveBeenCalled();
+		
+	});*/
+
+});
+
+describe("cube Tests", function () {
+
+	var cube = new Shape3D("cube", 30, 30, 30);
+
+	it("check name", function () {
+		expect(cube.name).toEqual("cube");
+	});
+
+	it("area (set by parent)", function () {
+		expect(cube.area).toEqual(900);
+	});
+
+	it("volume", function () {
+		expect(cube.volume).toEqual(27000);
 	});
 
 });
