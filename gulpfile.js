@@ -13,7 +13,7 @@ gulp.task('watch', function() {
 gulp.task('default', function () {
   var tsResult = gulp.src('source/typescript/*.ts')
     .pipe(ts({
-        noImplicitAny: true/*,
+        noImplicitAny: false/*,
         out: '/'
         out: 'output.js'*/
       }));
